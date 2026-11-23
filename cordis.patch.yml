@@ -1,0 +1,3 @@
+- insert:
+    - id: local-session-completion
+      name: '@local/dsh-session-completion'

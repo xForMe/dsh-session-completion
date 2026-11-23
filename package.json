@@ -1,0 +1,23 @@
+{
+  "name": "@local/dsh-session-completion",
+  "version": "1.0.3",
+  "private": true,
+  "type": "module",
+  "description": "Recent completed turns across your Harness conversations.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg"],
+  "scripts": { "test": "node --check client.js && node --test test/*.test.js" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-sidebar", "@deepseek-ai/dsh-client-ui-workspace", "@deepseek-ai/dsh-client-locale"]
+    }
+  }
+}

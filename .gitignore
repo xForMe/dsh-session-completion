@@ -1,0 +1,28 @@
+# Dependencies and generated output
+node_modules/
+coverage/
+dist/
+build/
+*.tgz
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs, caches and editor metadata
+*.log
+.cache/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Empty local artifact already present in this workspace
+/\[options\]
